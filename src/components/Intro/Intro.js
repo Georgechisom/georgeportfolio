@@ -20,7 +20,7 @@ const Intro = () => {
                 <img src={contact} className='w-5 object-cover' alt='contactIcon' />
             </button> */}
         </div>
-        <img src={design} alt='webappImage' className='lg:absolute lg:-top-2 lg:right-0 lg:-z-10 lg:object-cover h-full hover:duration-300 hover:scale-105' />
+        <img src={design} alt='webappImage' className='lg:absolute lg:-top-2 lg:right-0 lg:-z-10 lg:object-cover hover:duration-300 hover:scale-105' />
     </section>
   )
 };
