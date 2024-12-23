@@ -16,9 +16,11 @@ const Intro = () => {
               <img src={intro} className='w-5 md:w-6 lg:w-7 object-cover' alt='introbuttonimage'/> Hire Me
             </button>
           </Link>
-            {/* <button className='hidden md:inline-flex cursor-pointer border-2 border-black rounded-full py-2 px-2 hover:shadow-sm hover:shadow-black hover:duration-300 mr-auto'>
-                <img src={contact} className='w-5 object-cover' alt='contactIcon' />
-            </button> */}
+          <div className='ml-auto'>
+            <button className='fixed bottom-10 right-5 cursor-pointer border-2 border-skyText rounded-full py-2 px-2 lg:py-3 lg:px-3 hover:shadow-sm hover:shadow-skyText hover:duration-200 z-50'>
+                  <img src={intro} className='w-6 lg:w-8 object-cover' alt='contactIcon' />
+            </button>
+          </div>
         </div>
         <img src={design} alt='webappImage' className='lg:absolute lg:-top-2 lg:right-0 lg:-z-10 lg:object-cover hover:duration-300 hover:scale-105' />
     </section>
