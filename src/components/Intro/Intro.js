@@ -1,4 +1,5 @@
 import React from 'react';
+import 'boxicons'
 import { Link } from 'react-scroll';
 import intro from "../../assets/briefcase.png";
 import design from '../../assets/webapps.png';
@@ -17,8 +18,8 @@ const Intro = () => {
             </button>
           </Link>
           <div className='ml-auto'>
-            <button className='fixed bottom-10 right-5 cursor-pointer border-2 border-skyText rounded-full py-2 px-2 lg:py-3 lg:px-3 hover:shadow-sm hover:shadow-skyText hover:duration-200 z-50'>
-                  <img src={intro} className='w-6 lg:w-8 object-cover' alt='contactIcon' />
+            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer border-2 border-skyText lg:px-4 lg:py-1 lg:pt-0 px-[9px] py-[3px] pt-2 rounded-full hover:shadow-sm hover:shadow-skyText hover:duration-200 z-50'>
+              <box-icon type='solid' color='blue' size='sm' name='message-rounded-dots' animation="flashing"></box-icon>
             </button>
           </div>
         </div>
