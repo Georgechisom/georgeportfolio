@@ -12,7 +12,7 @@ const Intro = () => {
           <span>I'm <span className='text-skyText'>George</span> <br />Web and Mobile Developer</span>
           <p className='text-lg lg:text-xl font-medium'>I am an experienced developer specializing in websites and mobile apps, <br /> adept at designing distinctive, exquisite, and user-friendly applications.</p>
           <Link className='decoration-0'>
-            <button className='flex items-center justify-center gap-2 md:gap-3 text-nowrap bg-whiteText my-4 mx-0 py-2 lg:py-3 px-4 lg:px-8 rounded-full border-2 border-skyText text-sm md:text-base lg:text-xl group text-skyText
+            <button className='flex items-center justify-center gap-2 md:gap-3 text-nowrap bg-whiteText my-4 mx-0 py-2 lg:py-3 px-4 lg:px-8 rounded-full border-b-2 border-r-2 border-skyText text-sm md:text-base lg:text-xl group text-skyText
             shadow-md shadow-skyText duration-300 hover:bg-skyText hover:text-whiteText hover:shadow-none'>
               <img src={intro} className='w-5 md:w-6 lg:w-7 object-cover' alt='introbuttonimage'/> Hire Me
             </button>
