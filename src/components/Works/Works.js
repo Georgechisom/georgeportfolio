@@ -33,15 +33,15 @@ const Works = () => {
             }
         </div> */}
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 lg:gap-2 my-10 px-4'>
-            <Link to='https://georgeluxury.vercel.app/' className='border-2 border-skyText flex flex-col gap-2 items-center justify-center rounded-lg py-3 px-3 data-[focus]:bg-white/50 tracking-wide hover:cursor-pointer'>
+            <Link to='https://georgeluxury.vercel.app/' className='border-2 border-skyText flex flex-col gap-2 items-center justify-center rounded-lg py-3 px-3 data-[focus]:bg-white/50 tracking-wide hover:cursor-pointer hover:shadow-md hover:shadow-skyText'>
                 <img src={product} alt="ecommerceImage" className='object-cover rounded-md w-80' />
                 <span className='text-sm md:text-base font-semibold'>Luxury Store</span>
             </Link>
-            <Link to='https://meme-generator-app-delta.vercel.app/' className='hidden border-2 border-skyText lg:flex flex-col gap-2 items-center justify-center rounded-lg py-3 px-3 data-[focus]:bg-white/50 tracking-wide hover:cursor-pointer'>
+            <Link to='https://meme-generator-app-delta.vercel.app/' className='hidden border-2 border-skyText lg:flex flex-col gap-2 items-center justify-center rounded-lg py-3 px-3 data-[focus]:bg-white/50 tracking-wide hover:cursor-pointer hover:shadow-md hover:shadow-skyText'>
                 <img src={memes} alt="memeGenerator" className='object-cover rounded-md w-72 lg:64' />
                 <span className='text-sm md:text-base font-semibold'>Meme Generator</span>
             </Link>
-            <Link to='https://relaxed-kangaroo-973393.netlify.app/' className='border-2 border-skyText flex flex-col gap-2 items-center justify-center rounded-lg py-3 px-3 data-[focus]:bg-white/50 tracking-wide hover:cursor-pointer'>
+            <Link to='https://relaxed-kangaroo-973393.netlify.app/' className='border-2 border-skyText flex flex-col gap-2 items-center justify-center rounded-lg py-3 px-3 data-[focus]:bg-white/50 tracking-wide hover:cursor-pointer hover:shadow-md hover:shadow-skyText'>
                 <img src={form} alt="memeGenerator" className='object-cover rounded-md w-80' />
                 <span className='text-sm md:text-base font-semibold'>Multi~Step Form</span>
             </Link>
