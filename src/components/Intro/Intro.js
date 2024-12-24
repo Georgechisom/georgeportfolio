@@ -18,7 +18,7 @@ const Intro = () => {
             </button>
           </Link>
           <div className='ml-auto'>
-            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer border-2 border-skyText lg:px-4 lg:py-1 lg:pt-0 px-[9px] py-[3px] pt-2 rounded-full hover:shadow-sm hover:shadow-skyText hover:duration-200 z-50'>
+            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer border-2 border-skyText md:px-4 lg:px-4 lg:py-1 lg:pt-0 px-[10px] py-[3px] pt-2 rounded-full hover:shadow-md hover:shadow-skyText hover:duration-200 z-50 hover:bg-[#ffffff93]'>
               <box-icon type='solid' color='blue' size='sm' name='message-rounded-dots' animation="flashing"></box-icon>
             </button>
           </div>
