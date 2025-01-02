@@ -1,8 +1,11 @@
 import React from 'react';
+import 'boxicons';
 import paradisecomfort from "../../assets/comfortwhite2.png";
 import donation from "../../assets/donation.jpg";
 import winsome from "../../assets/winluxbgre.png";
 import trade from "../../assets/itrade.png";
+import twitter from "../../assets/twitter.png";
+import { Link } from 'react-scroll';
 
 const Contact = () => {
   return (
@@ -12,22 +15,47 @@ const Contact = () => {
             <p className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
                 I have had the opportunity to collaborate with a diverse group of companies, and among the notable ones I have worked with includes
             </p>
-            <div className='grid grid-cols-2 lg:grid-cols-4 mt-7 gap-1 md:gap-2 lg:px-20'>
-                <div className='border-2  border-skyText flex items-center justify-center px-4 py-2 cursor-pointer group'>
-                    <img src={paradisecomfort} alt="" className='w-48 h-auto group-hover:opacity-50 bg-black' />
+            <div className='grid grid-cols-2 lg:grid-cols-4 mt-7 gap-1 md:gap-4 justify-center md:px-8 lg:px-20'>
+                <div className='border-2 border-skyText flex items-center justify-center px-2 py-2 cursor-pointer group'>
+                    <img src={paradisecomfort} alt="" className='object-cover lg:w-[50%] w-36 h-auto group-hover:opacity-60 bg-black' />
                 </div>
-                <div className='border-2  border-skyText flex items-center justify-center px-4 py-2 cursor-pointer group'>
-                    <img src={donation} alt="" className='w-36 h-auto group-hover:opacity-50' />
+                <div className='border-2 border-skyText flex items-center justify-center px-2 py-4 cursor-pointer group'>
+                    <img src={donation} alt="" className='object-cover w-36 lg:w-[50%] h-auto group-hover:opacity-50' />
                 </div>
-                <div className='border-2  border-skyText flex items-center justify-center px-4 py-2 cursor-pointer group'>
-                    <img src={winsome} alt="" className='w-64 h-auto group-hover:opacity-50 bg-white' />
+                <div className='border-2 border-skyText flex items-center justify-center px-2 py-2 cursor-pointer group'>
+                    <img src={winsome} alt="" className='object-cover md:w-52 w-72 h-auto group-hover:opacity-50 bg-white' />
                 </div>
-                <div className='border-2 border-skyText flex items-center justify-center px-4 py-2 cursor-pointer group'>
-                    <img src={trade} alt="" className='w-36 h-auto group-hover:opacity-50 bg-white' />
+                <div className='border-2 border-skyText flex items-center justify-center px-2 py-4 cursor-pointer group'>
+                    <img src={trade} alt="" className='object-cover lg:w-[50%] w-36 h-auto group-hover:opacity-50 bg-white' />
                 </div>
             </div>
         </div>
-        <div></div>
+        <div className='my-4'>
+            <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold py-6 md:py-10 mb-5'>Contact Me</h2>
+            <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
+                Kindly fill out the form provided below to discuss any business opportunities.
+            </span>
+            <form className='flex flex-col items-center justify-center gap-4 lg:gap-4 my-10 py-4'>
+                <input type='text' className='font-medium w-full max-w-[40rem] m-2 border-t-0 border-b-2 border-r-2 shadow-md shadow-skyText border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-sm hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Name' />
+                <input type='email' className='font-medium w-full max-w-[40rem] m-2 border-t-0 border-b-2 border-r-2 shadow-md shadow-skyText border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:bg-white hover:border-black hover:shadow-black hover:shadow-sm focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
+                <textarea name='message' rows="5" className='font-medium w-full max-w-[40rem] m-2 border-t-0 border-b-2 border-r-2 shadow-md shadow-skyText border-skyText py-3 px-8 text-black rounded-lg hover:border-2 hover:border-black hover:shadow-black hover:shadow-sm hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Message'></textarea>
+                <button type='submit' value="send" className=''>Submit</button>
+            </form>
+            <div>
+                <Link>
+                    <box-icon type='logo' name='facebook-circle' color='blue' size='md' animation="tada"></box-icon>
+                </Link>
+                <Link>
+                    <img src={twitter} alt='twitterIcon' className='w-6' />
+                </Link>
+                <Link>
+                    <box-icon type='logo' name='youtube' color='red' size='md' animation="flashing"></box-icon>
+                </Link>
+                <Link>
+                    <box-icon type='logo' name='instagram-alt' color='#ee2a7b' size='md' animation="burst"></box-icon>
+                </Link>
+            </div>
+        </div>
     </section>
   );
 }
