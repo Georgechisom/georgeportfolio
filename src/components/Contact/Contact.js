@@ -5,7 +5,10 @@ import paradisecomfort from "../../assets/comfortwhite2.png";
 import donation from "../../assets/donation.jpg";
 import winsome from "../../assets/winluxbgre.png";
 import trade from "../../assets/itrade.png";
-import twitter from "../../assets/twitter.png";
+import twitter from "../../assets/twitter3.png";
+import youtube from "../../assets/youtube.png";
+import instagram from "../../assets/instagram.png";
+import facebook from "../../assets/facebook.png";
 import { Link } from 'react-scroll';
 
 const Contact = () => {
@@ -37,23 +40,23 @@ const Contact = () => {
                 Kindly fill out the form provided below to discuss any business opportunities.
             </span>
             <form className='flex flex-col items-center justify-center gap-4 lg:gap-4 my-10 py-4 px-4 shadow-lg shadow-skyText md:shadow-none'>
-                <input type='text' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Name' />
-                <input type='email' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 bg-white hover:border-black hover:shadow-black hover:shadow-lg focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
-                <textarea name='message' rows="5" className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-lg hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Message'></textarea>
-                <button type='submit' value="send" className='w-full max-w-[40rem] rounded-full border-2 consha border-skyText py-3 px-8 my-4 font-semibold bg-white hover:bg-[#ffffffa8] hover:text-skyText hover:border-2 hover:shadow-md hover:rounded-full hover:shadow-skyText hover:font-bold'>Submit</button>
+                <input type='text' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Name' />
+                <input type='email' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:bg-white hover:border-black hover:shadow-black hover:shadow-lg focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
+                <textarea name='message' rows="5" className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-lg hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Message'></textarea>
+                <button type='submit' value="send" className='w-full max-w-[40rem] rounded-full border-2 consha border-skyText py-3 px-8 my-4 font-semibold hover:bg-white hover:text-skyText hover:border-2 hover:shadow-md hover:rounded-full hover:shadow-skyText hover:font-bold'>Submit</button>
             </form>
-            <div>
-                <Link>
-                    <box-icon type='logo' name='facebook-circle' color='blue' size='md' animation="tada"></box-icon>
+            <div className='flex flex-row items-center justify-center flex-nowrap'>
+                <Link className='px-3 md:px-5'>
+                    <img src={facebook} alt='twitterIcon' className='w-10 object-cover' />
                 </Link>
-                <Link>
-                    <img src={twitter} alt='twitterIcon' className='w-6' />
+                <Link className='px-3 md:px-5'>
+                    <img src={twitter} alt='twitterIcon' className='w-10 object-cover' />
                 </Link>
-                <Link>
-                    <box-icon type='logo' name='youtube' color='red' size='md' animation="flashing"></box-icon>
+                <Link className='px-3 md:px-5'>
+                    <img src={youtube} alt='youtubeIcon' className='w-10 object-cover' />
                 </Link>
-                <Link>
-                    <box-icon type='logo' name='instagram-alt' color='#ee2a7b' size='md' animation="burst"></box-icon>
+                <Link className='px-3 md:px-5'>
+                <img src={instagram} alt='youtubeIcon' className='w-10 object-cover' />
                 </Link>
             </div>
         </div>
