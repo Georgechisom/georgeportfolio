@@ -1,5 +1,6 @@
 import React from 'react';
 import 'boxicons';
+import '../Contact/Contact.css'
 import paradisecomfort from "../../assets/comfortwhite2.png";
 import donation from "../../assets/donation.jpg";
 import winsome from "../../assets/winluxbgre.png";
@@ -35,11 +36,11 @@ const Contact = () => {
             <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
                 Kindly fill out the form provided below to discuss any business opportunities.
             </span>
-            <form className='flex flex-col items-center justify-center gap-4 lg:gap-4 my-10 py-4'>
-                <input type='text' className='font-medium w-full max-w-[40rem] m-2 border-t-0 border-b-2 border-r-2 shadow-lg shadow-skyText border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-sm hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Name' />
-                <input type='email' className='font-medium w-full max-w-[40rem] m-2 border-t-0 border-b-2 border-r-2 shadow-lg shadow-skyText border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:bg-white hover:border-black hover:shadow-black hover:shadow-sm focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
-                <textarea name='message' rows="5" className='font-medium w-full max-w-[40rem] m-2 border-t-0 border-b-2 border-r-2 shadow-lg shadow-skyText border-skyText py-3 px-8 text-black rounded-lg hover:border-2 hover:border-black hover:shadow-black hover:shadow-sm hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Message'></textarea>
-                <button type='submit' value="send" className=''>Submit</button>
+            <form className='flex flex-col items-center justify-center gap-4 lg:gap-4 my-10 py-4 px-4'>
+                <input type='text' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Name' />
+                <input type='email' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:bg-white hover:border-black hover:shadow-black hover:shadow-lg focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
+                <textarea name='message' rows="5" className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-lg hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Message'></textarea>
+                <button type='submit' value="send" className='w-full max-w-[40rem] rounded-full border-2 consha border-skyText py-3 px-8 my-4 font-semibold hover:bg-white hover:text-skyText hover:border-2 hover:shadow-md hover:rounded-full hover:shadow-skyText hover:font-bold'>Submit</button>
             </form>
             <div>
                 <Link>
