@@ -35,7 +35,7 @@ const Contact = () => {
             </div>
         </div>
         <div className='my-4'>
-            <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold py-6 md:py-10 mb-5'>Contact Me</h2>
+            <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold py-6 md:pt-10'>Contact Me</h2>
             <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
                 Kindly fill out the form provided below to discuss any business opportunities.
             </span>
