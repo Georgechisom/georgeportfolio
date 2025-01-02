@@ -7,7 +7,7 @@ const Skills = () => {
   return (
     <section className='max-w-screen-xl mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2'>
         <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold pt-12 mb-5'>What I Do</h2>
-        <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-52'>
+        <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
             I am an enthusiastic and talented developer with experience in building visually captivating and user-friendly websites and applications. I possess a deep knowledge of designs and have a Keen eye for detail. I am skilled in HTML, CSS, JavaScript, PHP, React, WordPress, and React Native.
         </span>
         <div className='w-full m-6 text-left max-w-4xl'>
