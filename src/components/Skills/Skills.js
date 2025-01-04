@@ -1,11 +1,11 @@
 import React from 'react';
 import uiDesign from "../../assets/bgui.png";
 import webDesign from "../../assets/webdesign.png";
-import appDesign from "../../assets/appdesign2.png"
+import appDesign from "../../assets/appdesign2.png";
 
 const Skills = () => {
   return (
-    <section className='max-w-screen-xl mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2'>
+    <section className='max-w-screen-xl mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2 skills'>
         <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold pt-12 mb-5'>What I Do</h2>
         <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
             I am an enthusiastic and talented developer with experience in building visually captivating and user-friendly websites and applications. I possess a deep knowledge of designs and have a Keen eye for detail. I am skilled in HTML, CSS, JavaScript, PHP, React, WordPress, and React Native.

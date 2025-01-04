@@ -6,7 +6,7 @@ import design from '../../assets/webapps.png';
 
 const Intro = () => {
   return (
-    <section className='max-w-screen-xl mx-auto w-full overflow-hidden mt-10 relative flex items-center justify-center flex-col lg:flex-row'>
+    <section className='max-w-screen-xl mx-auto w-full overflow-hidden mt-10 relative flex items-center justify-center flex-col lg:flex-row intro'>
         <div className='h-full w-full p-8 text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-col justify-center gap-y-2 overflow-hidden'>
           <span className='text-lg lg:text-xl font-medium'>Hello</span>
           <span>I'm <span className='text-skyText'>George</span> <br />Web and Mobile Developer</span>
@@ -18,7 +18,9 @@ const Intro = () => {
             </button>
           </Link>
           <div className='ml-auto'>
-            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer border-2 border-skyText md:px-4 lg:px-4 lg:py-1 lg:pt-0 px-[10px] py-[3px] pt-2 rounded-full hover:shadow-md hover:shadow-skyText hover:duration-200 z-50 hover:bg-[#ffffff93]'>
+            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer border-2 border-skyText md:px-4 lg:px-4 lg:py-1 lg:pt-0 px-[10px] py-[3px] pt-2 rounded-full hover:shadow-md hover:shadow-skyText hover:duration-200 z-50 hover:bg-[#ffffff93]' onClick={() => {
+              document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
+            }}>
               <box-icon type='solid' color='blue' size='sm' name='message-rounded-dots' animation="flashing"></box-icon>
             </button>
           </div>

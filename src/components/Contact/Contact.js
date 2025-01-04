@@ -14,7 +14,7 @@ import { Link } from 'react-scroll';
 const Contact = () => {
   return (
     <section className='max-w-screen-xl py-0 px-4 mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2'>
-        <div className='my-4'>
+        <div className='my-4 clients'>
             <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold py-6 md:py-10 mb-5'>My Clients</h2>
             <p className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
                 I have had the opportunity to collaborate with a diverse group of companies, and among the notable ones I have worked with includes
@@ -34,7 +34,8 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-        <div className='my-4'>
+        <div className='my-1' id='contact'></div>
+        <div className='my-4 contact'>
             <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold py-6 md:pt-10'>Contact Me</h2>
             <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
                 Kindly fill out the form provided below to discuss any business opportunities.

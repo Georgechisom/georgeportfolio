@@ -2,3 +2,20 @@
     box-shadow: 0 15px 45px -20px rgba(0, 0, 255, 0.719);
     background-color: white;
 }
+
+.active {
+    font-weight: bold;
+    font-style: italic;
+    color: blue;
+}
+
+.abu0 > .cc::after{
+    background-color: blue ;
+    content: '';
+    width: 100%;
+    height: 3px;
+    display: block;
+    margin: auto;
+    transition: 0.5s ;
+    cursor: pointer;
+}

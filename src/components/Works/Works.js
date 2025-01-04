@@ -15,7 +15,7 @@ import { Link } from 'react-scroll';
 
 const Works = () => {
   return (
-    <section className='max-w-screen-xl py-0 px-4 mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2'>
+    <section className='max-w-screen-xl py-0 px-4 mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2 works'>
         <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold py-6 md:py-10 mb-5'>My Portfolio</h2>
         <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
             I derive great satisfaction from concentrating on the finest details and guaranteeing that my work is flawless down to the pixel. I am excited to utilizing my skills and experience to assist businesses achieve their goals and establish a robust online presence.
