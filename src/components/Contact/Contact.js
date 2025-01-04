@@ -27,7 +27,7 @@ const Contact = () => {
                     <img src={donation} alt="" className='object-cover w-36 lg:w-[50%] h-auto group-hover:opacity-50' />
                 </div>
                 <div className='border-2 border-skyText flex items-center justify-center px-2 py-2 cursor-pointer group'>
-                    <img src={winsome} alt="" className='object-cover md:w-52 w-72 h-auto group-hover:opacity-50 bg-white' />
+                    <img src={winsome} alt="" className='object-cover md:w-48 w-48 h-auto group-hover:opacity-50 bg-white' />
                 </div>
                 <div className='border-2 border-skyText flex items-center justify-center px-2 py-4 cursor-pointer group'>
                     <img src={trade} alt="" className='object-cover lg:w-[50%] w-36 h-auto group-hover:opacity-50 bg-white' />
