@@ -19,3 +19,10 @@
     transition: 0.5s ;
     cursor: pointer;
 }
+
+.shasha{
+    box-shadow: 0 20px 20px -20px blue;
+    right: -20px; /* Hide it off screen initially */
+    transition: right 0.7s ease-in-out; /* Transition effect */
+}
+

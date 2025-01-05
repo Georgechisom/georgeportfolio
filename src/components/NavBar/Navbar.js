@@ -7,6 +7,8 @@ import menu from "../../assets/menu.png"
 const Navbar = () => {
     const [scrollWork, setScrollWork] = useState(false);
     const [showMenu, setShowMenu] = useState(false);
+    const [openMenu, setOpenMenu] = useState(true);
+    const [closeMenu, setCloseMenu] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -84,10 +86,13 @@ const Navbar = () => {
                 >Clients</Link>
             </div>
 
-            <button className='inline-flex md:hidden items-center justify-center cursor-pointer rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200' onClick={() => setShowMenu(!showMenu)} >
+            <button className='inline-flex md:hidden items-center justify-center cursor-pointer rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200' onClick={() => [setShowMenu(!showMenu), setCloseMenu(!closeMenu), setOpenMenu(!openMenu)]} style={{ display: openMenu ? 'flex' : 'none' }}>
                 <img src={menu} alt='menu' className='w-9 object-cover'/>
             </button>
-            <div className='overflow-hidden group text-lg absolute top-16 right-0 z-20 flex flex-col items-center p-4 h-96 duration-300 bg-white text-skyText rounded-sm min-w-60 abu0' style={{ display: showMenu ? 'flex' : 'none' }}>
+            <button className='inline-flex md:hidden items-center justify-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold' onClick={() => [setShowMenu(!showMenu), setCloseMenu(!closeMenu), setOpenMenu(!openMenu)]} style={{ display: closeMenu ? 'flex' : 'none' }}>
+                    x
+            </button>
+            <div className='overflow-hidden group text-lg absolute top-20 z-20 flex flex-col items-center p-4 h-96 bg-white text-skyText rounded-sm min-w-60 shadow-sm shasha abu0' style={{ display: showMenu ? 'flex' : 'none' }}>
                 <Link
                     className='hover:italic hover:font-bold py-3'
                     activeClass='active cc'
@@ -104,7 +109,7 @@ const Navbar = () => {
                     to='skills'
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-120}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >About</Link>
@@ -114,7 +119,7 @@ const Navbar = () => {
                     to='works'
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-120}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >Portfolio</Link>
@@ -124,7 +129,7 @@ const Navbar = () => {
                     to='clients'
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-120}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >Clients</Link>
@@ -134,7 +139,7 @@ const Navbar = () => {
                     to='contact'
                     spy={true}
                     smooth={true}
-                    offset={-100}
+                    offset={-120}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >Contact</Link>
