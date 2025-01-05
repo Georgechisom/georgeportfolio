@@ -8,4 +8,6 @@ const Footer = () => {
   )
 }
 
+// [setShowMenu(!showMenu), setCloseMenu(!closeMenu), setOpenMenu(!openMenu)]
+
 export default Footer

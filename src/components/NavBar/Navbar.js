@@ -10,6 +10,18 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(true);
     const [closeMenu, setCloseMenu] = useState(false);
 
+    const open = () => {
+        setCloseMenu(true)
+        setShowMenu(true)
+        setOpenMenu(!openMenu)
+    };
+
+    const close = () => {
+        setCloseMenu(false)
+        setShowMenu(false)
+        setOpenMenu(!openMenu)
+    }
+
     useEffect(() => {
         const handleScroll = () => {
             if (window.scrollY > 20) {
@@ -86,13 +98,13 @@ const Navbar = () => {
                 >Clients</Link>
             </div>
 
-            <button className='inline-flex md:hidden items-center justify-center cursor-pointer rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200' onClick={() => [setShowMenu(!showMenu), setCloseMenu(!closeMenu), setOpenMenu(!openMenu)]} style={{ display: openMenu ? 'flex' : 'none' }}>
+            <button className={openMenu ? 'flex md:hidden lg:hidden items-center justify-center cursor-pointer rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200' : 'hidden md:hidden lg:hidden'} onClick={open}>
                 <img src={menu} alt='menu' className='w-9 object-cover'/>
             </button>
-            <button className='inline-flex md:hidden items-center justify-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold' onClick={() => [setShowMenu(!showMenu), setCloseMenu(!closeMenu), setOpenMenu(!openMenu)]} style={{ display: closeMenu ? 'flex' : 'none' }}>
+            <button className='inline-flex md:hidden items-center justify-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold' onClick={close} style={{ display: closeMenu ? 'flex' : 'none' }}>
                     x
             </button>
-            <div className='overflow-hidden group text-lg absolute top-20 z-20 flex flex-col items-center p-4 h-96 bg-white text-skyText rounded-sm min-w-60 shadow-sm shasha abu0' style={{ display: showMenu ? 'flex' : 'none' }}>
+            <div className='overflow-hidden text-lg absolute top-20 right-20 z-20 flex flex-col items-center p-4 h-96 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 duration-300 shasha abu0' style={{ display: showMenu ? 'flex' : 'none' }}>
                 <Link
                     className='hover:italic hover:font-bold py-3'
                     activeClass='active cc'
