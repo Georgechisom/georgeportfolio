@@ -121,7 +121,7 @@ const Navbar = () => {
                     to='skills'
                     spy={true}
                     smooth={true}
-                    offset={-105}
+                    offset={-100}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >About</Link>
@@ -131,7 +131,7 @@ const Navbar = () => {
                     to='works'
                     spy={true}
                     smooth={true}
-                    offset={-105}
+                    offset={-100}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >Portfolio</Link>
@@ -141,7 +141,7 @@ const Navbar = () => {
                     to='clients'
                     spy={true}
                     smooth={true}
-                    offset={-105}
+                    offset={-100}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >Clients</Link>
@@ -151,7 +151,7 @@ const Navbar = () => {
                     to='contact'
                     spy={true}
                     smooth={true}
-                    offset={-105}
+                    offset={-100}
                     duration={500}
                     onClick={() => setShowMenu(false)}
                 >Contact</Link>
