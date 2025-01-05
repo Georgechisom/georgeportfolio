@@ -104,7 +104,7 @@ const Navbar = () => {
             <button className='inline-flex md:hidden items-center justify-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold' onClick={close} style={{ display: closeMenu ? 'flex' : 'none' }}>
                     x
             </button>
-            <div className='overflow-hidden text-lg absolute top-20 right-20 z-20 flex flex-col items-center p-4 h-96 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 duration-300 shasha abu0' style={{ display: showMenu ? 'flex' : 'none' }}>
+            <div onClick={() => [setCloseMenu(!closeMenu), setOpenMenu(!openMenu)]} className='overflow-hidden text-lg absolute top-20 right-20 z-20 flex flex-col items-center p-4 h-96 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 duration-300 shasha abu0' style={{ display: showMenu ? 'flex' : 'none' }}>
                 <Link
                     className='hover:italic hover:font-bold py-3'
                     activeClass='active cc'
