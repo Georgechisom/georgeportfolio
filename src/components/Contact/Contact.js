@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import 'boxicons';
 import '../Contact/Contact.css'
 import paradisecomfort from "../../assets/comfortwhite2.png";
@@ -10,8 +10,30 @@ import youtube from "../../assets/youtube.png";
 import instagram from "../../assets/instagram.png";
 import facebook from "../../assets/facebook.png";
 import { Link } from 'react-scroll';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs
+          .sendForm('service_1c7nzti', 'template_05fc143', form.current, {
+            publicKey: '3xkdrosaiXH3tldX1',
+          })
+          .then(
+            () => {
+              console.log('SUCCESS!');
+              e.target.reset();
+              alert("Email Sent");
+            },
+            (error) => {
+              console.log('FAILED...', error.text);
+            },
+        );
+    };
+
   return (
     <section className='max-w-screen-xl py-0 px-4 mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2'>
         <div className='my-4 clients'>
@@ -40,9 +62,9 @@ const Contact = () => {
             <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
                 Kindly fill out the form provided below to discuss any business opportunities.
             </span>
-            <form className='flex flex-col items-center justify-center gap-4 lg:gap-4 my-10 py-4 px-4 shadow-lg shadow-skyText md:shadow-none'>
-                <input type='text' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Name' />
-                <input type='email' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:bg-white hover:border-black hover:shadow-black hover:shadow-lg focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
+            <form className='flex flex-col items-center justify-center gap-4 lg:gap-4 my-10 py-4 px-4 shadow-lg shadow-skyText md:shadow-none' ref={form} onSubmit={sendEmail}>
+                <input type='text' name='to_name' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-#030303 placeholder:text-black focus:border-none' placeholder='Your Name' />
+                <input type='email' name='from_name' className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-full hover:border-2 hover:bg-white hover:border-black hover:shadow-black hover:shadow-lg focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Email' />
                 <textarea name='message' rows="5" className='font-medium w-full max-w-[40rem] m-2 border-2 consha border-skyText py-3 px-8 text-black rounded-lg hover:border-2 hover:border-black hover:shadow-black hover:shadow-lg hover:bg-white focus:bg-white placeholder:text-black focus:border-none' placeholder='Your Message'></textarea>
                 <button type='submit' value="send" className='w-full max-w-[40rem] rounded-full border-2 consha border-skyText py-3 px-8 my-4 font-semibold hover:bg-white hover:text-skyText hover:border-2 hover:shadow-md hover:rounded-full hover:shadow-skyText hover:font-bold'>Submit</button>
             </form>
