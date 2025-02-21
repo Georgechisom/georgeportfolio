@@ -8,7 +8,7 @@ const Skills = () => {
     <section className='max-w-screen-xl mx-auto w-full overflow-hidden flex flex-col items-center justify-center text-center my-2 skills'>
         <h2 className='text-2xl md:text-3xl lg:text-4xl font-extrabold pt-12 mb-5'>What I Do</h2>
         <span className='font-medium text-sm sm:text-base py-0 px-6 lg:px-20'>
-            I am an enthusiastic and talented developer with experience in building visually captivating and user-friendly websites and applications. I possess a deep knowledge of designs and have a Keen eye for detail. I am skilled in HTML, CSS, JavaScript, PHP, React, WordPress, and React Native.
+            I am an enthusiastic and talented developer with experience in building visually captivating and user-friendly websites and applications. I possess a deep knowledge of designs and have a Keen eye for detail. I am skilled in HTML, CSS, JavaScript, Php, Laravel, React, WordPress, and React Native.
         </span>
         <div className='w-full m-6 text-left max-w-4xl'>
             <div className='flex flex-col md:flex-row lg:flex-row items-center m-4 py-4 md:py-6 px-3 md:px-8 border b-2 border-skyText rounded-lg shadow-md shadow-skyText mb-8 gap-x-1 lg:gap-y-0 lg:gap-x-10 md:gap-x-10 bg-whiteText hover:shadow-lg hover:shadow-skyText'>
