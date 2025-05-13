@@ -4,11 +4,11 @@
     box-sizing: border-box;
     text-decoration: none;
     background: transparent;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 
 body {
-    background: url("./generalbg.jpg");
+    background-color: #FF0000;
     color: black;
     overflow: hidden;
     overflow-y: scroll;

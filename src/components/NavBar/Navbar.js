@@ -101,59 +101,61 @@ const Navbar = () => {
             <button className={openMenu ? 'flex md:hidden lg:hidden items-center justify-center cursor-pointer rounded-md hover:shadow-sm hover:shadow-[rgb(51,170,255)] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200' : 'hidden md:hidden lg:hidden'} onClick={open}>
                 <img src={menu} alt='menu' className='w-9 object-cover'/>
             </button>
-            <button className={closeMenu ? 'inline-flex md:hidden items-center justify-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold duration-500 z-10' : 'hidden md:hidden lg:hidden'} onClick={close}>
-                    x
-            </button>
-            <div className={showMenu ? 'overflow-hidden text-lg top-20 flex flex-col items-center p-4 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 shasha abu0 md:hidden lg:hidden fixed  right-0 h-full bottom-0 justify-center overflow-x-hidden duration-500 font-semibold z-50 w-60' : 'hidden md:hidden lg:hidden w-0'} >
-                <Link
-                    className='hover:italic hover:font-bold py-3'
-                    activeClass='active cc'
-                    to='intro'
-                    spy={true}
-                    smooth={true}
-                    offset={-150}
-                    duration={500}
-                    onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
-                >Home</Link>
-                <Link
-                    className='hover:italic hover:font-bold py-3'
-                    activeClass='active cc'
-                    to='skills'
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
-                >About</Link>
-                <Link
-                    className='hover:italic hover:font-bold py-3'
-                    activeClass='active cc'
-                    to='works'
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
-                >Portfolio</Link>
-                <Link
-                    className='hover:italic hover:font-bold py-3'
-                    activeClass='active cc'
-                    to='clients'
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
-                >Clients</Link>
-                <Link
-                    className='hover:italic hover:font-bold py-3'
-                    activeClass='active cc'
-                    to='contact'
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
-                >Contact</Link>
+            <div className={showMenu ? 'overflow-hidden text-lg flex flex-col items-center p-4 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 shasha abu0 md:hidden lg:hidden fixed  right-0 h-full bottom-0 justify-center overflow-x-hidden duration-500 font-semibold w-60 top-0 bg-transparent z-10' : 'hidden md:hidden lg:hidden w-0'} >
+                <button className={closeMenu ? 'inline-flex md:hidden items-center justify-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold duration-500 z-10 top-0 right-o' : 'hidden md:hidden lg:hidden'} onClick={close}>
+                        x
+                </button>
+                <div className='fixed  right-0 bg-white text-blue-600 w-0 h-full bottom-0 flex justify-center items-center overflow-x-hidden duration-500 font-semibold z-50'>
+                    <Link
+                        className='hover:italic hover:font-bold py-3'
+                        activeClass='active cc'
+                        to='intro'
+                        spy={true}
+                        smooth={true}
+                        offset={-150}
+                        duration={500}
+                        onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
+                    >Home</Link>
+                    <Link
+                        className='hover:italic hover:font-bold py-3'
+                        activeClass='active cc'
+                        to='skills'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
+                    >About</Link>
+                    <Link
+                        className='hover:italic hover:font-bold py-3'
+                        activeClass='active cc'
+                        to='works'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
+                    >Portfolio</Link>
+                    <Link
+                        className='hover:italic hover:font-bold py-3'
+                        activeClass='active cc'
+                        to='clients'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
+                    >Clients</Link>
+                    <Link
+                        className='hover:italic hover:font-bold py-3'
+                        activeClass='active cc'
+                        to='contact'
+                        spy={true}
+                        smooth={true}
+                        offset={-100}
+                        duration={500}
+                        onClick={() => [setCloseMenu(false), setShowMenu(false), setOpenMenu(true)]}
+                    >Contact</Link>
+                </div>
             </div>
         </div>
     </nav>
