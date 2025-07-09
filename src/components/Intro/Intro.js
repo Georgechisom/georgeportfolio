@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import intro from "../../assets/briefcase.png";
 import design from '../../assets/webapps.png';
+import messageIcon from "../../assets/message_icon.png";
 
 const Intro = () => {
   return (
@@ -18,10 +19,10 @@ const Intro = () => {
             </button>
           </Link>
           <div className='ml-auto'>
-            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer border-2 border-skyText md:px-4 lg:px-4 lg:py-1 lg:pt-0 px-[10px] py-[3px] pt-2 rounded-full hover:shadow-md hover:shadow-skyText hover:duration-200 z-50 hover:bg-[#ffffff93]' onClick={() => {
+            <button className='fixed bottom-6 lg:bottom-10 right-5 cursor-pointer hover:shadow-md hover:shadow-skyText rounded-full hover:duration-200 p-2 border-2 border-skyText mx-auto my-auto text-center' onClick={() => {
               document.getElementById('contact').scrollIntoView({behavior: 'smooth'});
             }}>
-              <box-icon type='solid' color='blue' size='sm' name='message-rounded-dots' animation="flashing"></box-icon>
+              <img src={messageIcon} alt='messageIcon' className='object-cover w-8 lg:w-12 z-50 animate-pulse' />
             </button>
           </div>
         </div>
