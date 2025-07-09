@@ -1,5 +1,5 @@
 import React from 'react';
-import 'boxicons'
+// import 'boxicons'
 import { Link } from 'react-scroll';
 import intro from "../../assets/briefcase.png";
 import design from '../../assets/webapps.png';

@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import 'boxicons';
+// import 'boxicons';
 import '../Contact/Contact.css'
 import paradisecomfort from "../../assets/comfortwhite2.png";
 import donation from "../../assets/donation.jpg";
