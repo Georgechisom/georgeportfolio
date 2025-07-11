@@ -4,14 +4,16 @@ import { Link } from 'react-scroll';
 import intro from "../../assets/briefcase.png";
 import design from '../../assets/webapps.png';
 import messageIcon from "../../assets/message_icon.png";
+import "./Intro.css";
 
 const Intro = () => {
+
   return (
     <section className='max-w-screen-xl mx-auto w-full overflow-hidden mt-10 relative flex items-center justify-center flex-col lg:flex-row intro'>
         <div className='h-full w-full p-8 text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-col justify-center gap-y-2 overflow-hidden'>
           <span className='text-lg lg:text-xl font-medium'>Hello</span>
-          <span>I'm <span className='text-skyText'>George</span> <br />Web and Mobile Developer</span>
-          <p className='text-lg lg:text-xl font-medium'>I am an experienced developer specializing in websites and mobile apps, <br className='hidden md:flex' /> adept at designing distinctive, exquisite, and user-friendly applications.</p>
+          <span className='specialAnimation py-2'>I'm <span className='text-skyText'>George Chisom</span></span>
+          <p className='text-lg lg:text-xl font-medium'>A well experienced developer specializing in websites and mobile apps, <br className='hidden md:flex' /> adept at designing distinctive, exquisite, and user-friendly applications.</p>
           <Link className='decoration-0'>
             <button className='flex items-center justify-center gap-2 md:gap-3 text-nowrap bg-whiteText my-4 mx-0 py-2 lg:py-3 px-4 lg:px-8 rounded-full border-b-2 border-r-2 border-skyText text-sm md:text-base lg:text-xl group text-skyText
             shadow-md shadow-skyText duration-300 hover:bg-skyText hover:text-whiteText hover:shadow-none'>
