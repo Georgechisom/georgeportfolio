@@ -35,3 +35,25 @@
         border-color: transparent;
     }
 }
+
+.hraside{
+    width: 80%;
+    border: 1px solid blue;
+}
+.newborder{
+    border: 1px solid blue;
+}
+.svgcol{
+    color: blue;
+    fill: blue;
+}
+
+.smallbg {
+    background-image: url("../../assets/generalbg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: black;
+    overflow: hidden;
+}

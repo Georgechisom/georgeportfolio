@@ -101,7 +101,7 @@ const Navbar = () => {
             <button className={openMenu ? 'flex md:hidden lg:hidden items-center justify-center cursor-pointer rounded-md hover:shadow-sm hover:shadow-[rgb(51,170,255)] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200' : 'hidden md:hidden lg:hidden'} onClick={open}>
                 <img src={menu} alt='menu' className='w-9 object-cover'/>
             </button>
-            <div className={showMenu ? 'overflow-hidden text-lg flex flex-col items-center p-4 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 shasha abu0 md:hidden lg:hidden fixed  right-0 h-full bottom-0 justify-center overflow-x-hidden duration-500 font-semibold w-60 top-0 bg-transparent z-10' : 'hidden md:hidden lg:hidden w-0'} >
+            <div className={showMenu ? 'overflow-hidden text-lg flex flex-col items-center p-4 bg-white text-skyText rounded-sm min-w-60 shadow-sm gap-1 transition -translate-x-5 group:translate-x-6 shasha abu0 md:hidden lg:hidden fixed  right-0 h-full bottom-0 justify-center overflow-x-hidden duration-500 font-semibold w-60 top-0 bg-transparent z-40' : 'hidden md:hidden lg:hidden w-0'} >
                 <button className={closeMenu ? 'inline-flex md:hidden items-center cursor-pointer text-[#33AAFF] text-3xl rounded-md hover:shadow-sm hover:shadow-[#33AAFF] border-2 border-[#33AAFF] hover:border-2 hover:border-[#33AAFF] hover:duration-200 px-3 font-semibold duration-500 z-10 top-0 right-o ml-auto' : 'hidden md:hidden lg:hidden'} onClick={close}>
                         x
                 </button>

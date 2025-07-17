@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "briefcase.png",
+      "src": "./briefcase.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "briefcase.png",
+      "src": "./briefcase.png",
       "type": "image/png",
       "sizes": "512x512"
     }
