@@ -1,59 +1,120 @@
-.bgs{
-    position: absolute;
-    top: -4rem;
-    right: 0;
-    z-index: -1;
-    object-fit: cover;
-    height: 100%;
-    background-repeat: no-repeat;
+.bgs {
+  position: absolute;
+  top: -4rem;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
-.specialAnimation{
-    border-right: 2px solid black;
-    overflow: hidden;
-    white-space: nowrap;
-    width: 40%;
-    animation: special_typing 6s steps(40, end), blink-caret 0.75s step-end infinite;
-    animation-fill-mode: forwards;
-    /* animation: special_typing 6s steps(40, end) infinite, blink-caret 0.75s step-end infinite; */
+.specialAnimation {
+  border-right: 2px solid black;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 40%;
+  animation: special_typing 6s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+  animation-fill-mode: forwards;
+  /* animation: special_typing 6s steps(40, end) infinite, blink-caret 0.75s step-end infinite; */
+}
+
+/* New cycling animation for aside */
+.cyclingAnimation {
+  border-right: 2px solid #3b82f6;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typewriter 3s steps(30, end), blink-cursor 0.75s step-end infinite;
+  animation-fill-mode: forwards;
+  display: inline-block;
+  max-width: 100%;
+}
+
+.fadeOut {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  border-right: 2px solid transparent;
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #3b82f6;
+  }
 }
 
 @keyframes special_typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 80%;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
 }
 
 @keyframes blink-caret {
-    from, to {
-        border-color: transparent;
-    }
-    50% {
-        border-color: transparent;
-    }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
 }
 
-.hraside{
-    width: 80%;
-    border: 1px solid blue;
+.hraside {
+  width: 80%;
+  border: 1px solid blue;
 }
-.newborder{
-    border: 1px solid blue;
+.newborder {
+  border: 1px solid blue;
 }
-.svgcol{
-    color: blue;
-    fill: blue;
+.svgcol {
+  color: blue;
+  fill: blue;
 }
 
 .smallbg {
-    background-image: url("../../assets/generalbg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    color: black;
-    overflow: hidden;
+  background-image: url("../../assets/generalbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  color: black;
+  overflow: hidden;
+}
+
+/* Responsive layout adjustments for aside - handled at App level */
+
+/* Ensure main content scrolls properly */
+.main-content {
+  min-height: 100vh;
+  overflow-y: auto;
+}
+
+/* Layout adjustments for aside */
+@media (min-width: 1024px) {
+  .main-content {
+    margin-left: 22rem;
+    padding-left: 2rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .main-content {
+    margin-left: 0;
+    padding-left: 0;
+  }
 }

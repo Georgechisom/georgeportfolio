@@ -1,0 +1,160 @@
+/* Aside Component Styles */
+
+/* Desktop Aside */
+.aside-container {
+  position: fixed;
+  top: 10rem;
+  left: 2rem;
+  bottom: 2rem;
+  width: 28rem;
+  z-index: 20;
+  display: none;
+}
+
+.aside-content {
+  height: 90%;
+  width: 100%;
+  background: url("../../assets/generalbg.jpg");
+  backdrop-filter: blur(8px);
+  border: 2px solid blue;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+}
+
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.profile-image {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid blue;
+}
+
+.profile-name {
+  color: blue;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Cycling Animation */
+.cycling-text {
+  font-weight: 700;
+  text-align: center;
+  font-size: 1rem;
+  min-height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+}
+
+.typing-animation {
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: blink-cursor 1s step-end infinite;
+}
+
+@keyframes blink-cursor {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+/* Contact Information */
+.contact-divider {
+  width: 80%;
+  border: 1px solid blue;
+  margin: 0.5rem 0;
+}
+
+.contact-item {
+  width: 100%;
+  border: 1px solid blue;
+  border-radius: 0.75rem;
+  margin: 0.25rem 0;
+  display: flex;
+  padding: 0.5rem 1rem;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.contact-icon {
+  color: blue;
+  fill: blue;
+  width: 20px;
+  height: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-label {
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.contact-link {
+  font-weight: 600;
+  cursor: pointer;
+  color: #1f2937;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+  font-style: italic;
+  color: blue;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+  .aside-container {
+    display: block;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 1023px) {
+  .aside-container {
+    display: none;
+  }
+}
+
+/* Smooth transitions */
+.aside-content * {
+  transition: all 0.2s ease;
+}
+
+/* Hover effects for better interactivity */
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(59, 130, 246, 0.3);
+}
+
+.contact-item:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+  transform: translateX(2px);
+}
