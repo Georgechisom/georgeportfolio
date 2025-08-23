@@ -194,7 +194,7 @@ const Intro = () => {
         </Link>
         <div className="z-100 flex flex-row justify-between items-center bg-black">
           <button
-            className="lg:hidden fixed bottom-6 md:bottom-10 left-[3%] cursor-pointer hover:shadow-md hover:shadow-white rounded-full hover:duration-200 p-2 my-auto text-center hover:bg-white border-2 z-[999] border-skyText"
+            className="lg:hidden fixed bottom-6 md:bottom-10 left-[3%] cursor-pointer hover:shadow-md hover:shadow-white rounded-full hover:duration-200 p-2 my-auto text-center hover:bg-white border-[1.5px] z-[999] border-skyText"
             onClick={showAside}
           >
             <svg
@@ -212,7 +212,7 @@ const Intro = () => {
             </svg>
           </button>
           <button
-            className="fixed bottom-6 lg:bottom-10 right-[3%] cursor-pointer hover:shadow-md hover:shadow-white hover:bg-white rounded-full hover:duration-200 p-2 mx-auto my-auto text-center z-50 border-2 border-skyText"
+            className="fixed bottom-6 lg:bottom-10 right-[3%] cursor-pointer hover:shadow-md hover:shadow-white hover:bg-white rounded-full hover:duration-200 p-2 mx-auto my-auto text-center z-50 border-[1px] border-skyText"
             onClick={() => {
               document
                 .getElementById("contact")
