@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import "./Intro.css";
 import { Link } from "react-scroll";
-import { Bag, ContactImage, DeskImage, Owner } from "../../assets/AllImages";
+import { Bag, ContactImage, Owner, OwnerBg } from "../../assets/AllImages";
 import Aside from "../Aside/Aside";
 
 const Intro = () => {
@@ -10,6 +10,45 @@ const Intro = () => {
   const showAside = () => {
     setAside(!aside);
   };
+
+  const [displayText, setDisplayText] = useState("");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
+  const [charIndex, setCharIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const texts = useMemo(
+    () => [
+      "Web and Mobile App Developer",
+      "Blockchain Developer",
+      "Full Stack Developer",
+      "SEO Professional",
+    ],
+    []
+  );
+
+  useEffect(() => {
+    const currentText = texts[currentTextIndex];
+
+    const timeout = setTimeout(
+      () => {
+        if (!isDeleting && charIndex < currentText.length) {
+          setDisplayText(currentText.substring(0, charIndex + 1));
+          setCharIndex(charIndex + 1);
+        } else if (isDeleting && charIndex > 0) {
+          setDisplayText(currentText.substring(0, charIndex - 1));
+          setCharIndex(charIndex - 1);
+        } else if (!isDeleting && charIndex === currentText.length) {
+          setTimeout(() => setIsDeleting(true), 1500);
+        } else if (isDeleting && charIndex === 0) {
+          setIsDeleting(false);
+          setCurrentTextIndex((prevIndex) => (prevIndex + 1) % texts.length);
+        }
+      },
+      isDeleting ? 50 : 100
+    );
+
+    return () => clearTimeout(timeout);
+  }, [charIndex, isDeleting, currentTextIndex, texts]);
 
   return (
     <section className="max-w-screen-xl mx-auto w-full h-full overflow-hidden mt-10 lg:mt-10 relative flex flex-col lg:flex-row items-start gap-2 px-1 lg:px-5 lg:grid-cols-2 intro">
@@ -27,13 +66,11 @@ const Intro = () => {
             alt="GeorgeChisom"
             className="w-20 h-20 object-cover mr-auto rounded-full"
           />
-          <div className="text-base md:text-xl mx-auto text-skyText font-bold text-nowrap py-1 text-center md:w-full">
-            George Chisom
-          </div>
+          <div className="profile-name">George Chisom</div>
         </div>
-        <span className="font-semibold text-nowrap specialAnimation">
-          Web and Mobile App Developer
-        </span>
+        <div className="cycling-text">
+          <span className="typing-animation">{displayText}</span>
+        </div>
 
         <hr className="hraside my-2" />
         <div className="w-full newborder rounded-xl my-1 flex py-2 px-4 gap-x-3 items-center">
@@ -107,10 +144,17 @@ const Intro = () => {
         </div>
       </aside>
       <div className="h-full w-full p-8 text-3xl md:text-4xl lg:text-5xl font-extrabold flex flex-col justify-center gap-y-2 overflow-hidden">
-        <span className="text-lg lg:text-xl font-medium">Hello</span>
-        <span className="specialAnimation py-2">
-          I'm <span className="text-skyText">George Chisom</span>
+        <span className="text-lg lg:text-xl font-medium hidden md:flex">
+          Hello
         </span>
+        <span className="specialAnimation py-2 hidden md:flex">
+          I'm <span className="text-skyText ml-1"> George Chisom</span>
+        </span>
+        <div className="text-nowrap md:hidden">
+          <span className="font-medium">Hi, I'm</span>
+          <br />{" "}
+          <span className="text-skyText specialAnimation">George Chisom</span>
+        </div>
         <p className="hidden lg:flex text-lg lg:text-xl font-medium py-2">
           A passionate Web3 developer with a knack for crafting engaging, user
           friendly applications that make an impact. My skill set covers a wide
@@ -148,7 +192,7 @@ const Intro = () => {
             Hire Me
           </button>
         </Link>
-        <div className="ml-auto z-30 flex flex-col items-center justify-center bg-black">
+        <div className="ml-auto z-100 flex flex-col items-center justify-center bg-black">
           <button
             className="lg:hidden fixed bottom-[12%] right-[3%] cursor-pointer hover:shadow-md hover:shadow-white rounded-full hover:duration-200 p-2 mx-auto my-auto text-center hover:bg-white"
             onClick={showAside}
@@ -183,9 +227,9 @@ const Intro = () => {
           </button>
         </div>
         <img
-          src={DeskImage}
+          src={OwnerBg}
           alt="webappImage"
-          className="lg:object-cover hover:duration-300 hover:scale-105 w-[70%] mx-auto"
+          className="lg:object-cover hover:duration-300 hover:scale-105 w-[100%] md:w-[70%] mx-auto"
         />
       </div>
     </section>

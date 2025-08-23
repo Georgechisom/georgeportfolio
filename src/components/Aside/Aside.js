@@ -14,7 +14,7 @@ const Aside = () => {
       "Web and Mobile App Developer",
       "Blockchain Developer",
       "Full Stack Developer",
-      "UI/UX Designer",
+      "SEO Professional",
     ],
     []
   );
